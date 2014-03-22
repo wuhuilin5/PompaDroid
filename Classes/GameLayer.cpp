@@ -2,42 +2,39 @@
 
 USING_NS_CC;
 
-Scene* GameLayer::createScene()
+namespace PompaDroid
 {
-    // 'scene' is an autorelease object
-    auto scene = Scene::create();
-    
-    // 'layer' is an autorelease object
-    auto layer = GameLayer::create();
+	GameLayer::GameLayer()
+	{
+	}
 
-    // add layer as a child to scene
-    scene->addChild(layer);
+	GameLayer::~GameLayer()
+	{
+	}
 
-    // return the scene
-    return scene;
-}
+	bool GameLayer::init()
+	{
+		bool ret = false;
 
-// on "init" you need to initialize your instance
-bool GameLayer::init()
-{
-    // 1. super init first
-    if ( !Layer::init() )
-    {
-        return false;
-    }
-   
-	initTileMap();
+		do{
+			CC_BREAK_IF(!Layer::init());
+
+			initTileMap();
+			initHero();
+
+			ret = true;
+		}while(0);
 	
-	initHero();
+		return ret;
+	}
 
-    return true;
-}
+	void GameLayer::initHero()
+	{
+	}
 
-void GameLayer::initHero()
-{
-}
-
-void GameLayer::initTileMap()
-{
-
+	void GameLayer::initTileMap()
+	{
+		_map = CCTMXTiledMap::create("pd_tilemap.tmx");
+		this->addChild( _map );
+	}
 }

@@ -18,7 +18,7 @@ namespace PompaDroid{
 		CREATE_FUNC(GameScene);
 	
 		//定义set/get方法
-		CC_SYNTHESIZE( GameLayer*, _gameLayer, GameLayer );
+		CC_SYNTHESIZE( GameLayer*, _gameLayer, GameLayer );  
 		CC_SYNTHESIZE( OptionLayer*, _optionLayer, OptionLayer );
 	};
 }

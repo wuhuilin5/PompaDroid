@@ -1,6 +1,6 @@
 
 #include "GameScene.h"
-#include "GameLayer.h";
+#include "GameLayer.h"
 
 namespace PompaDroid{
 
@@ -20,7 +20,7 @@ bool GameScene::init()
 		CC_BREAK_IF(!Scene::init());
 
 		_gameLayer = GameLayer::create();
-		this->addChild( _gameLayer );
+		this->addChild( _gameLayer, 0 );
 
 		ret = true;
 
