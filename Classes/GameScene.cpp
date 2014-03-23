@@ -4,29 +4,28 @@
 
 namespace PompaDroid{
 
-GameScene::GameScene()
-{
-}
+	GameScene::GameScene()
+	{
+	}
 
-GameScene::~GameScene()
-{
-}
+	GameScene::~GameScene()
+	{
+	}
 
-bool GameScene::init()
-{
-	bool ret = false;
+	bool GameScene::init()
+	{
+		bool ret = false;
 
-	do{
-		CC_BREAK_IF(!Scene::init());
+		do{
+			CC_BREAK_IF(!Scene::init());
 
-		_gameLayer = GameLayer::create();
-		this->addChild( _gameLayer, 0 );
+			_gameLayer = GameLayer::create();
+			this->addChild( _gameLayer, 0 );
 
-		ret = true;
+			ret = true;
 
-	}while(0);
+		}while(0);
 
-	return ret;
-}
-
+		return ret;
+	}
 }

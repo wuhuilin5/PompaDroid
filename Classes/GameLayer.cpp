@@ -1,10 +1,13 @@
 #include "GameLayer.h"
+#include "Hero.h"
+#include "ActionSprite.h"
 
 USING_NS_CC;
 
 namespace PompaDroid
 {
-	GameLayer::GameLayer()
+	GameLayer::GameLayer():
+	_actor(nullptr)
 	{
 	}
 
@@ -19,6 +22,10 @@ namespace PompaDroid
 		do{
 			CC_BREAK_IF(!Layer::init());
 
+			SpriteFrameCache::getInstance()->addSpriteFramesWithFile( "pd_sprites.plist" );
+			_actor = SpriteBatchNode::create( "pd_sprites.pvr.ccz" );
+			this->addChild( _actor );
+
 			initTileMap();
 			initHero();
 
@@ -30,11 +37,16 @@ namespace PompaDroid
 
 	void GameLayer::initHero()
 	{
+		/*_hero = Hero::create();
+		_hero->setPosition(80,80);
+		_hero->idle();
+
+		this->addChild(_hero)*/;
 	}
 
 	void GameLayer::initTileMap()
 	{
-		_map = CCTMXTiledMap::create("pd_tilemap.tmx");
+		_map = TMXTiledMap::create("pd_tilemap.tmx");
 		this->addChild( _map );
 	}
 }

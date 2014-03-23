@@ -2,6 +2,7 @@
 #define __GAME_LAYER_H__
 
 #include "cocos2d.h"
+#include "ActionSprite.h"
 
 namespace PompaDroid{
 	class GameLayer : public cocos2d::Layer
@@ -22,7 +23,11 @@ namespace PompaDroid{
 		//init tile map
 		void initTileMap();
 	
-		cocos2d::TMXTiledMap *_map;
+		ActionSprite* _hero;
+		cocos2d::Vector<ActionSprite*> _robots;
+		cocos2d::SpriteBatchNode* _actor;
+
+		cocos2d::TMXTiledMap* _map;
 	};
 }
 
