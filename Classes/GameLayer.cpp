@@ -37,11 +37,11 @@ namespace PompaDroid
 
 	void GameLayer::initHero()
 	{
-		/*_hero = Hero::create();
+		_hero = Hero::create();
 		_hero->setPosition(80,80);
 		_hero->idle();
 
-		this->addChild(_hero)*/;
+		this->addChild(_hero);
 	}
 
 	void GameLayer::initTileMap()

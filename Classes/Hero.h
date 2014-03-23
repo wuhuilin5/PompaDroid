@@ -4,8 +4,6 @@
 #include "ActionSprite.h"
 #include "cocos2d.h"
 
-#pragma comment(lib, "winmm.lib")
-
 namespace PompaDroid
 {
 	class Hero:public ActionSprite

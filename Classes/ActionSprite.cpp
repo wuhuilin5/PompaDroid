@@ -77,7 +77,7 @@ namespace PompaDroid
 		return ret;
 	}
 
-	cocos2d::Animation* createAnimation( const char* fmt, int count, float fps )
+	cocos2d::Animation* ActionSprite::createAnimation( const char* fmt, int count, float fps )
 	{
 		cocos2d::Vector<cocos2d::SpriteFrame*> frames;
 
