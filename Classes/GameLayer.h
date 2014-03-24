@@ -23,6 +23,8 @@ namespace PompaDroid{
 		//init tile map
 		void initTileMap();
 	
+		void initRobots();
+
 		ActionSprite* _hero;
 		cocos2d::Vector<ActionSprite*> _robots;
 		cocos2d::SpriteBatchNode* _actor;

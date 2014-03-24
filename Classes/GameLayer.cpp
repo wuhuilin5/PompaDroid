@@ -1,11 +1,13 @@
 #include "GameLayer.h"
 #include "Hero.h"
-#include "ActionSprite.h"
+#include "Robot.h"
 
 USING_NS_CC;
 
 namespace PompaDroid
 {
+	class ActionSprite;
+
 	GameLayer::GameLayer():
 	_actor(nullptr)
 	{
@@ -23,11 +25,13 @@ namespace PompaDroid
 			CC_BREAK_IF(!Layer::init());
 
 			SpriteFrameCache::getInstance()->addSpriteFramesWithFile( "pd_sprites.plist" );
-			_actor = SpriteBatchNode::create( "pd_sprites.pvr.ccz" );
-			this->addChild( _actor );
+		/*	_actor = SpriteBatchNode::create( "pd_sprites.pvr.ccz" );
+			_actor->setPosition( 0, 0 );
+			this->addChild( _actor );*/
 
 			initTileMap();
 			initHero();
+			initRobots();
 
 			ret = true;
 		}while(0);
@@ -47,6 +51,20 @@ namespace PompaDroid
 	void GameLayer::initTileMap()
 	{
 		_map = TMXTiledMap::create("pd_tilemap.tmx");
-		this->addChild( _map );
+		this->addChild( _map, 0 );
+	}
+
+	void GameLayer::initRobots()
+	{
+		int count = 5;
+		for( int i = 0; i < count; i++ )
+		{
+			ActionSprite* robot = Robot::create();
+			robot->setPosition( CCRANDOM_0_1()*400, CCRANDOM_0_1()*150 );
+			robot->idle();
+			//_actor->addChild( robot ); //添加到SpriteBatchNode，没有显示出来，为何？
+			this->addChild( robot );
+			_robots.pushBack( robot );
+		}
 	}
 }
