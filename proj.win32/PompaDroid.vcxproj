@@ -138,6 +138,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClCompile Include="..\Classes\GameLayer.cpp" />
     <ClCompile Include="..\Classes\GameScene.cpp" />
     <ClCompile Include="..\Classes\Hero.cpp" />
+    <ClCompile Include="..\Classes\OptionDelegate.cpp" />
     <ClCompile Include="..\Classes\OptionLayer.cpp" />
     <ClCompile Include="..\Classes\Robot.cpp" />
     <ClCompile Include="main.cpp" />
@@ -148,7 +149,9 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClInclude Include="..\Classes\GameLayer.h" />
     <ClInclude Include="..\Classes\GameScene.h" />
     <ClInclude Include="..\Classes\Hero.h" />
+    <ClInclude Include="..\Classes\OptionDelegate.h" />
     <ClInclude Include="..\Classes\OptionLayer.h" />
+    <ClInclude Include="..\Classes\PompaDroid.h" />
     <ClInclude Include="..\Classes\Robot.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
@@ -166,6 +169,20 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\CloseNormal.png" />
+    <Image Include="..\Resources\CloseSelected.png" />
+    <Image Include="..\Resources\HelloWorld.png" />
+    <Image Include="..\Resources\joystick.png" />
+    <Image Include="..\Resources\joystick_bg.png" />
+    <Image Include="..\Resources\pd_tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\map_2.tmx" />
+    <None Include="..\Resources\pd_sprites.plist" />
+    <None Include="..\Resources\pd_sprites.pvr.ccz" />
+    <None Include="..\Resources\pd_tilemap.tmx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

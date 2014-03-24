@@ -36,6 +36,9 @@
     <ClCompile Include="..\Classes\Robot.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\OptionDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -62,10 +65,50 @@
     <ClInclude Include="..\Classes\Robot.h">
       <Filter>Classes</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\OptionDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PompaDroid.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
       <Filter>resource</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\CloseNormal.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\CloseSelected.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\HelloWorld.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\joystick.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\joystick_bg.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="..\Resources\pd_tiles.png">
+      <Filter>resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\map_2.tmx">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\pd_sprites.plist">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\pd_sprites.pvr.ccz">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\pd_tilemap.tmx">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
 </Project>
