@@ -19,28 +19,58 @@ namespace PompaDroid{
 			_joystick_bg = Sprite::create("CloseNormal.png");
 			this->addChild( _joystick_bg );
 		
-			setTouchEnabled(true);
-	
+			inActivityJoystick();
+			
+			auto dispatcher = Director::getInstance()->getEventDispatcher();
+			auto listener = EventListenerTouchOneByOne::create();
+			listener->setSwallowTouches( true);
+
+			listener->onTouchBegan = CC_CALLBACK_2( OptionLayer::onTouchBegan, this ); //std::bind( &OptionLayer::onTouchBegan, this, std::placeholders::_1, std::placeholders::_2); 
+			listener->onTouchMoved = CC_CALLBACK_2( OptionLayer::onTouchMoved, this );
+			listener->onTouchEnded = CC_CALLBACK_2( OptionLayer::onTouchEnded, this );
+
+			dispatcher->addEventListenerWithSceneGraphPriority( listener, this );
+		
 			ret = true;
 		}while(0);
 
 		return ret;
-
 	}
 
-	void OptionLayer::onTouchesBegan( cocos2d::Vector<cocos2d::Touch*>& touch, cocos2d::Event* e )
+	bool OptionLayer::onTouchBegan( Touch* touch, Event* e )
 	{
+		bool ret;
 
+		Size winSize = Director::getInstance()->getWinSize();
+		Point pt = touch->getLocation();
+
+		if( pt.x <= (winSize.width/2)){
+			activityJoystick( pt );
+			ret = true;
+		}else{
+			ret = false;
+		}
+		return ret;
 	}
 
-	void OptionLayer::onTouchesMoved( cocos2d::Vector<cocos2d::Touch*>& touch, cocos2d::Event* e )
+	void OptionLayer::onTouchMoved( Touch* touch, Event* e )
 	{
+		Size winSize = Director::getInstance()->getWinSize();
 
+		Point start = touch->getStartLocation();
+		if( start.x >= winSize.width/2)
+			return;
+		
+		Point pt = touch->getLocation();
+		float distance = start.getDistance(pt);
+		Point direction = (pt-start).normalize();
+
+		updateJoystick( direction, distance );
 	}
 
-	void OptionLayer::onTouchesEnded( cocos2d::Vector<cocos2d::Touch*>& touch, cocos2d::Event* e )
+	void OptionLayer::onTouchEnded( Touch* touch, Event* e )
 	{
-
+		inActivityJoystick();
 	}
 
 	void OptionLayer::activityJoystick( cocos2d::Point position )
@@ -64,7 +94,7 @@ namespace PompaDroid{
 		Point start = _joystick_bg->getPosition();
 		float dis = distance;
 		if( dis <= 32 ) dis = distance;
-		else if( dis >= 96 ) dis = 64;
+		//else if( dis >= 64 ) dis = 64;
 		else dis = 32;
 
 		_joystick->setPosition( start+( direction*dis));

@@ -18,10 +18,10 @@ namespace PompaDroid{
 		CREATE_FUNC(OptionLayer);
 		
 		//触控的三个事件重载
-		void onTouchesBegan( cocos2d::Vector<cocos2d::Touch*>& touch, cocos2d::Event* e );
-		void onTouchesMoved( cocos2d::Vector<cocos2d::Touch*>& touch, cocos2d::Event* e );
-		void onTouchesEnded( cocos2d::Vector<cocos2d::Touch*>& touch, cocos2d::Event* e );
-
+		bool onTouchBegan(Touch *touch, Event *unused_event); 
+		void onTouchMoved(Touch *touch, Event *unused_event); 
+		void onTouchEnded(Touch *touch, Event *unused_event); 
+  
 		CC_SYNTHESIZE( OptionDelegate*, _delegator, Delegator );
 
 	private:
