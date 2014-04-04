@@ -20,12 +20,12 @@ namespace PompaDroid{
 		ActionSprite();
 		~ActionSprite();
 
-		void idle();
-		void walk( cocos2d::Point direction );
-		void attack();
-		void hurt(int demage );
-		void knockout();
-		
+		virtual void idle();
+		virtual void attack();
+		virtual void knockout();
+		virtual void walk( cocos2d::Point direction, float distance );
+		virtual void hurt(int demage );
+
 		//动作状态
 		CC_SYNTHESIZE_RETAIN( cocos2d::Action*, _idleAction, IdleAction );
 		CC_SYNTHESIZE_RETAIN( cocos2d::Action*, _attackAction, AttackAction );
@@ -35,11 +35,6 @@ namespace PompaDroid{
 
 		//精灵的当前状态
 		CC_SYNTHESIZE( ActionState, _currentState, ActionState);
-
-		CC_SYNTHESIZE( float, _velocity, Velocity );		//移动速度
-		CC_SYNTHESIZE( cocos2d::Point, _direction, Direction );	//移动方向
-		CC_SYNTHESIZE( unsigned int, _hp, HP );			//生命值
-		CC_SYNTHESIZE( unsigned int, _atk, ATK );		//攻击力
 
 	protected:
 		static cocos2d::Animation* createAnimation( const char* fmt, int count, float fps );

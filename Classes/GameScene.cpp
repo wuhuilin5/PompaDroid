@@ -26,6 +26,11 @@ namespace PompaDroid{
 			_optionLayer = OptionLayer::create();
 			this->addChild( _optionLayer );
 
+			_optionDelegate = OptionDelegate::create();
+			_optionDelegate->setTarget( _gameLayer->getHero());
+
+			_optionLayer->setDelegator( _optionDelegate );
+
 			ret = true;
 
 		}while(0);

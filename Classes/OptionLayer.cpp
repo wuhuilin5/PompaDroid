@@ -1,4 +1,5 @@
 #include "OptionLayer.h"
+#include "OptionDelegate.h"
 
 namespace PompaDroid{
 	OptionLayer::OptionLayer()
@@ -39,18 +40,16 @@ namespace PompaDroid{
 
 	bool OptionLayer::onTouchBegan( Touch* touch, Event* e )
 	{
-		bool ret;
-
 		Size winSize = Director::getInstance()->getWinSize();
 		Point pt = touch->getLocation();
 
 		if( pt.x <= (winSize.width/2)){
 			activityJoystick( pt );
-			ret = true;
 		}else{
-			ret = false;
+			_delegator->onAttack();
 		}
-		return ret;
+	
+		return true;
 	}
 
 	void OptionLayer::onTouchMoved( Touch* touch, Event* e )
@@ -58,19 +57,28 @@ namespace PompaDroid{
 		Size winSize = Director::getInstance()->getWinSize();
 
 		Point start = touch->getStartLocation();
-		if( start.x >= winSize.width/2)
-			return;
-		
 		Point pt = touch->getLocation();
+
 		float distance = start.getDistance(pt);
 		Point direction = (pt-start).normalize();
 
-		updateJoystick( direction, distance );
+		if( start.x >= winSize.width/2){
+			_delegator->onWalk( direction, distance );
+		}else{
+			updateJoystick( direction, distance );
+		}
 	}
 
 	void OptionLayer::onTouchEnded( Touch* touch, Event* e )
 	{
-		inActivityJoystick();
+		Size winSize = Director::getInstance()->getWinSize();
+
+		Point start = touch->getStartLocation();
+		if( start.x >= winSize.width/2 ){
+			_delegator->onStop();
+		}else{
+			inActivityJoystick();
+		}
 	}
 
 	void OptionLayer::activityJoystick( cocos2d::Point position )

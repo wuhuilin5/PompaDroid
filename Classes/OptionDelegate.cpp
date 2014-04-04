@@ -12,9 +12,14 @@ namespace PompaDroid
 		setTarget( nullptr );
 	}
 
+	OptionDelegate* OptionDelegate::create()
+	{
+		return new OptionDelegate();
+	}
+
 	void OptionDelegate::onWalk( cocos2d::Point direction, float distance )
 	{
-		_target->walk( direction );
+		_target->walk( direction, distance );
 	}
 
 	void OptionDelegate::onAttack()

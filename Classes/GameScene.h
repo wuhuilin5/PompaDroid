@@ -6,6 +6,7 @@
 namespace PompaDroid{
 	class GameLayer;
 	class OptionLayer;
+	class OptionDelegate;
 
 	class GameScene:public cocos2d::Scene
 	{
@@ -20,6 +21,7 @@ namespace PompaDroid{
 		//定义set/get方法
 		CC_SYNTHESIZE( GameLayer*, _gameLayer, GameLayer );  
 		CC_SYNTHESIZE( OptionLayer*, _optionLayer, OptionLayer );
+		CC_SYNTHESIZE( OptionDelegate*, _optionDelegate, OptionDelegate );
 	};
 }
 

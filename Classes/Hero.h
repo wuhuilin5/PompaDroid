@@ -1,12 +1,12 @@
 #ifndef  _HERO_H_
 #define  _HERO_H_
 
-#include "ActionSprite.h"
+#include "BaseCharactor.h"
 #include "cocos2d.h"
 
 namespace PompaDroid
 {
-	class Hero:public ActionSprite
+	class Hero:public BaseCharactor
 	{
 	public:
 		 Hero();

@@ -16,6 +16,7 @@ namespace PompaDroid{
     
 		// implement the "static create()" method manually
 		CREATE_FUNC(GameLayer);
+		CC_SYNTHESIZE( ActionSprite*, _hero, Hero );
 
 	private:
 		// init hero charactor
@@ -25,7 +26,7 @@ namespace PompaDroid{
 	
 		void initRobots();
 
-		ActionSprite* _hero;
+	
 		cocos2d::Vector<ActionSprite*> _robots;
 		cocos2d::SpriteBatchNode* _actor;
 

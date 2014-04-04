@@ -12,7 +12,9 @@ namespace PompaDroid
 	public:
 		OptionDelegate();
 		~OptionDelegate();
-	
+		
+		static OptionDelegate* create();
+
 		//移动，directoion为方向，distance是与起点的直线距离
 		void onWalk( cocos2d::Point direction, float distance );
 

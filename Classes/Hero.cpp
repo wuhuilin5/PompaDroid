@@ -44,7 +44,6 @@ namespace PompaDroid
 
 			setATK(20);
 			setHP(100);
-			setVelocity(1);
 			setDirection(Point::ZERO);
 
 			ret = true;

@@ -29,16 +29,13 @@ namespace PompaDroid
 	{
 		if( changeState( ActionState::ACTION_STATE_IDLE )){
 			this->runAction( _idleAction );
-			_velocity = 0;
 		}
 	}
 
-	void ActionSprite::walk( cocos2d::Point )
+	void ActionSprite::walk( cocos2d::Point direction, float distance )
 	{
 		if( changeState(ActionState::ACTION_STATE_WALK)){
 			this->runAction(_walkAction);
-			_direction = Point(0,0);
-			_direction.x > 0 ? setFlippedX(true) : setFlippedX(false);
 		}
 	}
 
@@ -46,12 +43,6 @@ namespace PompaDroid
 	{
 		if( changeState(ActionState::ACTION_STATE_HURT )){
 			this->runAction(_hurtAction );
-
-			_hp -= demage;
-			if( _hp <= 0 ){
-				_hp = 0;
-				knockout();
-			}
 		}
 	}
 
