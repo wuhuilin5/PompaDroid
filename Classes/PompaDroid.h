@@ -9,5 +9,6 @@
 #include "Robot.h"
 #include "OptionLayer.h"
 #include "OptionDelegate.h"
+#include "BaseCharactor.h"
 
 #endif

@@ -3,18 +3,18 @@
 
 namespace PompaDroid
 {
-	OptionDelegate::OptionDelegate()
+	OptionDelegate::OptionDelegate():_target(nullptr)
 	{
 	}
 
 	OptionDelegate::~OptionDelegate()
 	{
-		setTarget( nullptr );
+		CC_SAFE_RELEASE(_target);
 	}
 
-	OptionDelegate* OptionDelegate::create()
+	bool OptionDelegate::init()
 	{
-		return new OptionDelegate();
+		return true;
 	}
 
 	void OptionDelegate::onWalk( cocos2d::Point direction, float distance )

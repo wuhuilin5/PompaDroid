@@ -5,7 +5,7 @@
 
 namespace PompaDroid{
 
-	GameScene::GameScene()
+	GameScene::GameScene():_gameLayer(nullptr),_optionLayer(nullptr),_optionDelegate(nullptr)
 	{
 	}
 

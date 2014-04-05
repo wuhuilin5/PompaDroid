@@ -2,12 +2,13 @@
 #include "OptionDelegate.h"
 
 namespace PompaDroid{
-	OptionLayer::OptionLayer()
+	OptionLayer::OptionLayer():_delegator(nullptr)
 	{
 	}
 
 	OptionLayer::~OptionLayer()
 	{
+		setDelegator( nullptr );
 	}
 
 	bool OptionLayer::init()
@@ -62,9 +63,8 @@ namespace PompaDroid{
 		float distance = start.getDistance(pt);
 		Point direction = (pt-start).normalize();
 
-		if( start.x >= winSize.width/2){
+		if( start.x <= winSize.width/2){
 			_delegator->onWalk( direction, distance );
-		}else{
 			updateJoystick( direction, distance );
 		}
 	}
@@ -74,9 +74,8 @@ namespace PompaDroid{
 		Size winSize = Director::getInstance()->getWinSize();
 
 		Point start = touch->getStartLocation();
-		if( start.x >= winSize.width/2 ){
+		if( start.x <= winSize.width/2 ){
 			_delegator->onStop();
-		}else{
 			inActivityJoystick();
 		}
 	}

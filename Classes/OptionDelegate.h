@@ -2,18 +2,19 @@
 #define _OPTION_DELEGATE_H_
 
 #include "cocos2d.h"
+#include "ActionSprite.h"
 
 namespace PompaDroid
 {
-	class ActionSprite;
-
-	class OptionDelegate
+	class OptionDelegate:public cocos2d::Object
 	{
 	public:
 		OptionDelegate();
 		~OptionDelegate();
 		
-		static OptionDelegate* create();
+		virtual bool init();
+
+		CREATE_FUNC( OptionDelegate );
 
 		//移动，directoion为方向，distance是与起点的直线距离
 		void onWalk( cocos2d::Point direction, float distance );
@@ -23,8 +24,8 @@ namespace PompaDroid
 		
 		//停止移动
 		void onStop();
-	
-		CC_SYNTHESIZE( ActionSprite*, _target, Target );
+
+		CC_SYNTHESIZE_RETAIN( ActionSprite*, _target, Target );
 	};
 }
 

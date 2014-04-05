@@ -2,6 +2,8 @@
 #define __OPTION_LAYER_H__
 
 #include "cocos2d.h"
+#include "OptionDelegate.h"
+
 USING_NS_CC;
 
 namespace PompaDroid{
@@ -21,8 +23,8 @@ namespace PompaDroid{
 		bool onTouchBegan(Touch *touch, Event *unused_event); 
 		void onTouchMoved(Touch *touch, Event *unused_event); 
 		void onTouchEnded(Touch *touch, Event *unused_event); 
-  
-		CC_SYNTHESIZE( OptionDelegate*, _delegator, Delegator );
+
+		CC_SYNTHESIZE_RETAIN( OptionDelegate*, _delegator, Delegator );
 
 	private:
 		cocos2d::Sprite* _joystick;
