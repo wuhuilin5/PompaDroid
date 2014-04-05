@@ -11,11 +11,11 @@ namespace PompaDroid
 		BaseCharactor();
 		~BaseCharactor();
 
-		virtual void idle();
-		virtual void attack();
-		virtual void knockout();
-		virtual void walk( cocos2d::Point direction, float distance );
-		virtual void hurt(int demage );
+		virtual void idle() override;
+		virtual void attack() override;
+		virtual void knockout() override;
+		virtual void walk( cocos2d::Point direction, float distance ) override;
+		virtual void hurt(int demage ) override;
 
 		void update();
 

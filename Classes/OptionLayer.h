@@ -20,9 +20,9 @@ namespace PompaDroid{
 		CREATE_FUNC(OptionLayer);
 		
 		//触控的三个事件重载
-		bool onTouchBegan(Touch *touch, Event *unused_event); 
-		void onTouchMoved(Touch *touch, Event *unused_event); 
-		void onTouchEnded(Touch *touch, Event *unused_event); 
+		bool onTouchBegan(Touch *touch, Event *unused_event) override; 
+		void onTouchMoved(Touch *touch, Event *unused_event) override; 
+		void onTouchEnded(Touch *touch, Event *unused_event) override; 
 
 		CC_SYNTHESIZE_RETAIN( OptionDelegate*, _delegator, Delegator );
 
