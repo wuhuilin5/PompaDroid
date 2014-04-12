@@ -14,6 +14,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libchipmunk", "..\cocos2d\e
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libAudio", "..\cocos2d\cocos\audio\proj.win32\CocosDenshion.vcxproj", "{F8EDD7FA-9A51-4E80-BAEB-860825D2EAC6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libCocosBuilder", "..\cocos2d\cocos\editor-support\cocosbuilder\proj.win32\libCocosBuilder.vcxproj", "{811C0DAB-7B96-4BD3-A154-B7572B58E4AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -36,6 +38,10 @@ Global
 		{F8EDD7FA-9A51-4E80-BAEB-860825D2EAC6}.Debug|Win32.Build.0 = Debug|Win32
 		{F8EDD7FA-9A51-4E80-BAEB-860825D2EAC6}.Release|Win32.ActiveCfg = Release|Win32
 		{F8EDD7FA-9A51-4E80-BAEB-860825D2EAC6}.Release|Win32.Build.0 = Release|Win32
+		{811C0DAB-7B96-4BD3-A154-B7572B58E4AB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{811C0DAB-7B96-4BD3-A154-B7572B58E4AB}.Debug|Win32.Build.0 = Debug|Win32
+		{811C0DAB-7B96-4BD3-A154-B7572B58E4AB}.Release|Win32.ActiveCfg = Release|Win32
+		{811C0DAB-7B96-4BD3-A154-B7572B58E4AB}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
