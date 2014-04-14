@@ -87,6 +87,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControl.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlButton.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlColourPicker.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlHuePicker.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlPotentiometer.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSlider.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlStepper.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSwitch.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlUtils.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCInvocation.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCScale9Sprite.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBox.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplAndroid.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplNone.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplTizen.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplWin.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCScrollView\CCScrollView.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCScrollView\CCTableView.cpp" />
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCScrollView\CCTableViewCell.cpp" />
     <ClCompile Include="..\CCBAnimationManager.cpp" />
     <ClCompile Include="..\CCBFileLoader.cpp" />
     <ClCompile Include="..\CCBKeyframe.cpp" />
@@ -111,6 +131,29 @@
     <ClCompile Include="..\CCSpriteLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControl.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlButton.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlColourPicker.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlExtensions.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlHuePicker.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlPotentiometer.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSlider.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlStepper.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSwitch.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlUtils.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCInvocation.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCScale9Sprite.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBox.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImpl.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplAndroid.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplIOS.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplMac.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplTizen.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplWin.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCScrollView\CCScrollView.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCScrollView\CCTableView.h" />
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCScrollView\CCTableViewCell.h" />
     <ClInclude Include="..\CCBAnimationManager.h" />
     <ClInclude Include="..\CCBFileLoader.h" />
     <ClInclude Include="..\CCBKeyframe.h" />
@@ -138,6 +181,10 @@
     <ClInclude Include="..\CCScrollViewLoader.h" />
     <ClInclude Include="..\CCSpriteLoader.h" />
     <ClInclude Include="..\CocosBuilder.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplIOS.mm" />
+    <None Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplMac.mm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

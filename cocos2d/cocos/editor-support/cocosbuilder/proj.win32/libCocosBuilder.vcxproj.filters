@@ -9,6 +9,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="extensions">
+      <UniqueIdentifier>{a17d87c8-c478-4a6a-bd7e-17fed182d839}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\CCBSequenceProperty.cpp">
@@ -76,6 +79,66 @@
     </ClCompile>
     <ClCompile Include="..\CCBSequence.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControl.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlButton.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlColourPicker.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlHuePicker.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlPotentiometer.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSlider.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlStepper.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSwitch.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlUtils.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCInvocation.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCControlExtension\CCScale9Sprite.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCScrollView\CCScrollView.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCScrollView\CCTableView.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCScrollView\CCTableViewCell.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBox.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplAndroid.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplNone.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplTizen.cpp">
+      <Filter>extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplWin.cpp">
+      <Filter>extensions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -160,5 +223,82 @@
     <ClInclude Include="..\CCNodeLoaderListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControl.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlButton.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlColourPicker.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlExtensions.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlHuePicker.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlPotentiometer.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSlider.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlStepper.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlSwitch.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCControlUtils.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCInvocation.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCControlExtension\CCScale9Sprite.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCScrollView\CCScrollView.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCScrollView\CCTableView.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCScrollView\CCTableViewCell.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBox.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImpl.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplAndroid.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplIOS.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplMac.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplTizen.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplWin.h">
+      <Filter>extensions</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplIOS.mm">
+      <Filter>extensions</Filter>
+    </None>
+    <None Include="..\..\..\..\extensions\GUI\CCEditBox\CCEditBoxImplMac.mm">
+      <Filter>extensions</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "GameScene.h"
+#include "CCBuilderScene.h"
 
 USING_NS_CC;
 using namespace PompaDroid;
@@ -26,8 +27,14 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    auto scene = GameScene::create();
+	bool isUseCocosBuilderScene = true;
 
+	Scene* scene;
+	if( isUseCocosBuilderScene )
+		scene = CCBuilderScene::create();
+	else
+		scene = GameScene::create();
+    
     // run
     director->runWithScene(scene);
 

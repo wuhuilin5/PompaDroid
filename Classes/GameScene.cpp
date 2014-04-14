@@ -31,8 +31,7 @@ namespace PompaDroid{
 
 			_optionLayer->setDelegator( _optionDelegate );
 
-			ret = true;
-
+			ret = true;		
 		}while(0);
 
 		return ret;
